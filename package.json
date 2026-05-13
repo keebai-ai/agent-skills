@@ -1,0 +1,11 @@
+{
+  "name": "@keebai/agent-skills",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Official Keebai agent skills for Claude Code and the open Agent Skills format.",
+  "license": "MIT",
+  "files": ["skills", "README.md", "LICENSE"],
+  "engines": {
+    "node": ">=20"
+  }
+}

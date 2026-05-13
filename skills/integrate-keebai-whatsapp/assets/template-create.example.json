@@ -1,0 +1,42 @@
+{
+  "_note": "Body for POST /v1/templates with a header image, named body variables, and a quick_reply + URL button. Submit this to create the template; status will return as PENDING until Meta approves.",
+  "name": "order_confirmation_v2",
+  "language": "es",
+  "category": "UTILITY",
+  "components": [
+    {
+      "type": "HEADER",
+      "format": "IMAGE",
+      "example": {
+        "header_handle": ["https://cdn.example.com/templates/header.png"]
+      }
+    },
+    {
+      "type": "BODY",
+      "text": "Hola {{nombre}}, tu pedido {{pedido}} fue confirmado por un total de {{monto}}. Gracias por elegir Keebai.",
+      "example": {
+        "body_text_named_params": [
+          { "param_name": "nombre", "example": "Lucio" },
+          { "param_name": "pedido", "example": "ORD-1234" },
+          { "param_name": "monto", "example": "$15.000" }
+        ]
+      }
+    },
+    {
+      "type": "FOOTER",
+      "text": "Powered by Keebai"
+    },
+    {
+      "type": "BUTTONS",
+      "buttons": [
+        { "type": "QUICK_REPLY", "text": "Ver detalles" },
+        {
+          "type": "URL",
+          "text": "Seguir envío",
+          "url": "https://app.example.com/orders/{{1}}",
+          "example": ["ORD-1234"]
+        }
+      ]
+    }
+  ]
+}

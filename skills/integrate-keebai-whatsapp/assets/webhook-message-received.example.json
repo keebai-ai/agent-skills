@@ -1,0 +1,75 @@
+{
+  "event": "whatsapp.message.received",
+  "timestamp": "2026-05-13T00:00:00.123Z",
+  "webhook_id": "wh_abc123",
+  "data": {
+    "id": "wamid.HBgLNTQ5MTE1NTU1NTU1NRUCABIYIDcwMDA",
+    "from": "+5491155555555",
+    "phone_number_id": "100000000000001",
+    "timestamp": "1715558400",
+    "type": "text",
+    "text": {
+      "body": "Hola, quiero saber el estado de mi pedido."
+    },
+    "contact": {
+      "wa_id": "5491155555555",
+      "profile": { "name": "Lucio Portales" }
+    },
+    "_examples": {
+      "text": {
+        "type": "text",
+        "text": { "body": "Hola, ¿están disponibles?" }
+      },
+      "image": {
+        "type": "image",
+        "image": {
+          "id": "media_meta_abc",
+          "mime_type": "image/jpeg",
+          "sha256": "..."
+        }
+      },
+      "interactive_button_reply": {
+        "type": "interactive",
+        "interactive": {
+          "type": "button_reply",
+          "button_reply": { "id": "confirm", "title": "Confirmar" }
+        }
+      },
+      "interactive_list_reply": {
+        "type": "interactive",
+        "interactive": {
+          "type": "list_reply",
+          "list_reply": {
+            "id": "billing",
+            "title": "Facturación",
+            "description": "Pagos, facturas, créditos"
+          }
+        }
+      },
+      "audio_voice": {
+        "type": "audio",
+        "audio": {
+          "id": "media_meta_xyz",
+          "mime_type": "audio/ogg; codecs=opus",
+          "voice": true
+        }
+      },
+      "location": {
+        "type": "location",
+        "location": {
+          "latitude": -33.4489,
+          "longitude": -70.6693,
+          "name": "Plaza de Armas",
+          "address": "Santiago, Chile"
+        }
+      },
+      "reaction": {
+        "type": "reaction",
+        "reaction": {
+          "message_id": "wamid.HBgL...",
+          "emoji": "👍"
+        }
+      }
+    }
+  }
+}

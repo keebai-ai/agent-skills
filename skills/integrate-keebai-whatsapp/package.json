@@ -1,0 +1,10 @@
+{
+  "name": "integrate-keebai-whatsapp-scripts",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Runtime dependencies for the integrate-keebai-whatsapp skill scripts/.",
+  "dependencies": {
+    "@keebai/sdk": "^0.2.0"
+  }
+}

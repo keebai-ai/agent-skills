@@ -1,0 +1,52 @@
+{
+  "_note": "Three example shapes for delivered / read / failed events. In a real webhook delivery you receive only one of these, top-level under `data`.",
+  "delivered": {
+    "event": "whatsapp.message.delivered",
+    "timestamp": "2026-05-13T00:00:01.000Z",
+    "webhook_id": "wh_abc123",
+    "data": {
+      "message_id": "wamid.HBgL...",
+      "recipient": "+5491155555555",
+      "phone_number_id": "100000000000001",
+      "status": "delivered",
+      "delivered_at": "2026-05-13T00:00:00.987Z",
+      "conversation": {
+        "id": "conv_abc",
+        "expiration_timestamp": "1715641800",
+        "origin": { "type": "service" }
+      }
+    }
+  },
+  "read": {
+    "event": "whatsapp.message.read",
+    "timestamp": "2026-05-13T00:00:05.000Z",
+    "webhook_id": "wh_abc123",
+    "data": {
+      "message_id": "wamid.HBgL...",
+      "recipient": "+5491155555555",
+      "phone_number_id": "100000000000001",
+      "status": "read",
+      "read_at": "2026-05-13T00:00:04.500Z"
+    }
+  },
+  "failed": {
+    "event": "whatsapp.message.failed",
+    "timestamp": "2026-05-13T00:00:02.000Z",
+    "webhook_id": "wh_abc123",
+    "data": {
+      "message_id": "wamid.HBgL...",
+      "recipient": "+5491155555555",
+      "phone_number_id": "100000000000001",
+      "status": "failed",
+      "failed_at": "2026-05-13T00:00:01.800Z",
+      "errors": [
+        {
+          "code": 131026,
+          "title": "Message Undeliverable",
+          "message": "The recipient is unable to receive this message. Common causes: number not on WhatsApp, blocked by user, or 24h window expired.",
+          "error_data": { "details": "Receiver outside session window" }
+        }
+      ]
+    }
+  }
+}
